@@ -1,5 +1,6 @@
 //= require normalize
 //= require foundation.min
+//= require jquery-ui-1.9.2.custom.min
 //= require_self
 
 .login-btn {
@@ -24,4 +25,8 @@
 
 .meetups th.date {
   width: 10%;
+}
+
+.new-meetup-btn-group {
+  margin-top: 1em;
 }

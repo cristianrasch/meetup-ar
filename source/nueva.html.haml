@@ -1,0 +1,74 @@
+---
+title: Nueva meetup
+---
+
+.row
+  .small-12.small-centered.columns
+    %form.custom
+      %fieldset
+        %legend Registrá tu meetup
+        .row
+          .small-6.columns
+            .row
+              .small-3.columns
+                %label.inline{ for: "nombre" } Nombre
+              .small-9.columns
+                %input{ type: "text", placeholder: "Meetup mensual de Ruby Argentina" }
+          .small-6.columns
+            .row
+              .small-3.columns
+                %label.inline{ for: "lugar" } Lugar
+              .small-9.columns
+                %textarea{ rows: 3, placeholder: "La Maquitina, Niceto Vega 4736" }
+        .row
+          .small-6.columns
+            .row
+              .small-3.columns
+                %label.inline{ for: "provincia_id" } Provincia
+              .small-9.columns
+                %select{ name: "provincia_id" }
+                  %option{ value: "1", selected: true } Buenos Aires
+          .small-6.columns
+            .row
+              .small-3.columns
+                %label.inline{ for: "ciudad_id" } Ciudad
+              .small-9.columns
+                %select{ name: "ciudad_id" }
+                  %option{ value: "1", selected: true } Ramos Mejía
+        .row
+          .small-6.columns
+            .row
+              .small-3.columns
+                %label.inline{ for: "frecuencia" } Frecuencia
+              .small-9.columns
+                %label{ for: "frecuencia" }
+                  %input{ name: "frecuencia", id: "frecuencia", type: "radio", value: "semanal", style: "display:none;" }
+                  %span.custom.radio &nbsp;
+                  Semanal
+
+                %label{ for: "frecuencia" }
+                  %input{ name: "frecuencia", id: "frecuencia", type: "radio", value: "bisemanal", style: "display:none;" }
+                  %span.custom.radio &nbsp;
+                  Bi-semanal
+
+                %label{ for: "frecuencia" }
+                  %input{ name: "frecuencia", id: "frecuencia", type: "radio", value: "mensual", checked: true, style: "display:none;" }
+                  %span.custom.radio &nbsp;
+                  Mensual
+          .small-6.columns
+            .row
+              .small-3.columns
+                %label.inline{ for: "fecha" } Próxima reunión
+              .small-9.columns
+                %input{ type: "text", class: "datepicker" }
+        .row.new-meetup-btn-group
+          .small-4.small-centered.columns
+            %ul.button-group
+              %li
+                %button.button.radius{ type: "submit" } Registrar
+              %li= link_to "Volver", "/index.html", class: "button secondary radius"
+
+- content_for :js do
+  :javascript
+    $.datepicker.regional['es'];
+    $('.datepicker').datepicker({ dateFormat: 'dd/mm/yy' });

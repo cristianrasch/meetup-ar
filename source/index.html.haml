@@ -4,7 +4,7 @@ title: Bievenido a meetupar
 
 .row
   .small-9.small-centered.columns
-    %form
+    %form.custom
       %fieldset
         %legend Encontrá tu meetup
         .row
@@ -14,20 +14,14 @@ title: Bievenido a meetupar
                 %label.inline{ for: "provincia_id" } Provincia
               .small-9.columns
                 %select{ name: "provincia_id" }
-                  %option{ value: "" } &nbsp;
                   %option{ value: "1", selected: true } Buenos Aires
-                  %option{ value: "2" } Córboda
-                  %option{ value: "3" } Salta
           .small-6.columns
             .row
               .small-3.columns
                 %label.inline{ for: "ciudad_id" } Ciudad
               .small-9.columns
                 %select{ name: "ciudad_id" }
-                  %option{ value: "" } &nbsp;
                   %option{ value: "1", selected: true } Ramos Mejía
-                  %option{ value: "2" } Córboda
-                  %option{ value: "3" } Bariloche
         .row.collapse
           .small-10.columns
             %input{ type: "text", placeholder: "ruby javascript (tags separadas por espacios)", value: "ruby javascript" }

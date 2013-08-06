@@ -1,3 +1,5 @@
-//= require vendor/jquery
+//= require jquery
 //= require foundation.min
-//= require vendor/jquery.tablesorter.min
+//= require jquery.tablesorter.min
+//= require jquery-ui-1.9.2.custom.min
+//= require jquery.ui.datepicker-es
