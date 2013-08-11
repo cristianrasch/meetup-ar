@@ -1,0 +1,52 @@
+.row
+  .small-12.columns
+    .section-container.tabs{ data: { section: "tabs" } }
+      %section
+        %p.title{ data: { "section-title" => true } }
+          %a{ href: "#" } Próximos Eventos
+        .content{ data: { "section-content" => true } }
+          .row.tabbed-events
+            - 1.upto(2) do |i|
+              .small-5.columns.panel{ class: "tabbed-event-#{i.odd? ? 'left' : 'right'}" }
+                .row
+                  .small-3.columns
+                    %img{ src: "http://placehold.it/100x100&amp;text=Logo" }
+                  .small-5.columns
+                    %ul.no-bullet
+                      %li= link_to "Evento #{i}", "/evento.html"
+                      %li= link_to "Organizador #{i}", "/organizador.html"
+                  .small-4.columns
+                    %ul.no-bullet
+                      %li
+                        %span.radius.alert.label
+                          %i.generalfoundicon-calendar
+                          = format_date(Date.today+i)
+                      %li
+                        %span.radius.label
+                          %i.generalfoundicon-globe
+                          = "Lugar #{i}"
+
+      %section
+        %p.title{ data: { "section-title" => true} }
+          %a{ href: "#" } Eventos Anteriores
+        .content{ data: { "section-content" => true} }
+          .row.tabbed-events
+            - 3.upto(4) do |i|
+              .small-5.columns.panel{ class: "tabbed-event-#{i.odd? ? 'left' : 'right'}" }
+                .row
+                  .small-3.columns
+                    %img{ src: "http://placehold.it/100x100&amp;text=Logo" }
+                  .small-5.columns
+                    %ul.no-bullet
+                      %li= link_to "Evento #{i}", "/evento.html"
+                      %li= link_to "Organizador #{i}", "/organizador.html"
+                  .small-4.columns
+                    %ul.no-bullet
+                      %li
+                        %span.radius.alert.label
+                          %i.generalfoundicon-calendar
+                          = format_date(Date.today+i)
+                      %li
+                        %span.radius.label
+                          %i.generalfoundicon-globe
+                          = "Lugar #{i}"

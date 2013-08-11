@@ -11,32 +11,32 @@
         .small-5.columns
           %ul.no-bullet
             %li= link_to "Evento #{i}", "/evento.html"
-            %li= "Organizador #{i}"
+            %li= link_to "Organizador #{i}", "/organizador.html"
         .small-4.columns
           %ul.no-bullet
             %li
               %span.radius.alert.label
-                %i.foundicon-calendar
+                %i.generalfoundicon-calendar
                 = format_date(Date.today+i)
             %li
               %span.radius.label
-                %i.foundicon-globe
+                %i.generalfoundicon-globe
                 = "Lugar #{i}"
-    .small-5.columns.panel.right
+    .small-5.columns.panel
       .row
         .small-3.columns
           %img{ src: "http://placehold.it/100x100&amp;text=Logo" }
         .small-5.columns
           %ul.no-bullet
             %li= link_to "Evento #{i+1}", "/evento.html"
-            %li= "Organizador #{i+1}"
+            %li= link_to "Organizador #{i+1}", "/organizador.html"
         .small-4.columns
           %ul.no-bullet
             %li
               %span.radius.alert.label
-                %i.foundicon-calendar
+                %i.generalfoundicon-calendar
                 = format_date(Date.today+i+1)
             %li
               %span.radius.label
-                %i.foundicon-globe
+                %i.generalfoundicon-globe
                 = "Lugar #{i+1}"

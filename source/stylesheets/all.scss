@@ -2,6 +2,7 @@
 //= require foundation.min
 //= require jquery-ui-1.9.2.custom.min
 //= require general_foundicons
+//= require social_foundicons
 //= require_self
 
 .login-btn {
@@ -30,4 +31,20 @@
 
 .bottomless {
   margin-bottom: 0;
+}
+
+.titulo-organizador {
+  margin: 1em auto;
+}
+
+.tabbed-event-left {
+  margin-left: 1em;
+}
+
+.tabbed-event-right {
+  margin-right: 1em;
+}
+
+.tabbed-events {
+  margin-bottom: -1em !important;
 }
