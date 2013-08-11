@@ -1,20 +1,42 @@
 .row
-  .small-12.small-centered.columns
-    %table.full-width.meetups.tablesorter
-      %thead
-        %tr
-          %th.date Fecha
-          %th Evento
-          %th Organizador
-          %th Lugar
-      %tbody
-        - 1.upto(5) do |i|
-          %tr
-            %td= format_date(Date.today + i)
-            %td= "Evento #{i}"
-            %td= "Organizador #{i}"
-            %td= "Lugar #{i}"
+  .small-12.columns
+    %h3.text-center Próximos eventos
 
-- content_for :js do
-  :javascript
-    $('.meetups').tablesorter();
+- (1..6).step(2) do |i|
+  .row
+    .small-5.columns.panel
+      .row
+        .small-3.columns
+          %img{ src: "http://placehold.it/100x100&amp;text=Logo" }
+        .small-5.columns
+          %ul.no-bullet
+            %li= link_to "Evento #{i}", "/evento.html"
+            %li= "Organizador #{i}"
+        .small-4.columns
+          %ul.no-bullet
+            %li
+              %span.radius.alert.label
+                %i.foundicon-calendar
+                = format_date(Date.today+i)
+            %li
+              %span.radius.label
+                %i.foundicon-globe
+                = "Lugar #{i}"
+    .small-5.columns.panel.right
+      .row
+        .small-3.columns
+          %img{ src: "http://placehold.it/100x100&amp;text=Logo" }
+        .small-5.columns
+          %ul.no-bullet
+            %li= link_to "Evento #{i+1}", "/evento.html"
+            %li= "Organizador #{i+1}"
+        .small-4.columns
+          %ul.no-bullet
+            %li
+              %span.radius.alert.label
+                %i.foundicon-calendar
+                = format_date(Date.today+i+1)
+            %li
+              %span.radius.label
+                %i.foundicon-globe
+                = "Lugar #{i+1}"

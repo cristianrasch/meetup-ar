@@ -22,10 +22,29 @@ title: Bievenido a meetupar
               .small-9.columns
                 %select{ name: "ciudad_id" }
                   %option{ value: "1", selected: true } Ramos Mejía
+
         .row.collapse
           .small-10.columns
             %input{ type: "text", placeholder: "ruby javascript (tags separadas por espacios)", value: "ruby javascript" }
           .small-2.columns
             %button.button.radius.prefix{ type: "submit" } Buscar
+
+        .row
+          .small-12.small-centered.columns
+            %ul.inline-list.tags
+              %li
+                %span.radius.label Ruby
+              %li
+                %span.radius.label Rails
+              %li
+                %span.radius.label Sinatra
+              %li
+                %span.radius.label Javascript
+              %li
+                %span.radius.label node.js
+              %li
+                %span.radius.label HTML5
+              %li
+                %span.radius.label CSS3
 
 = partial "meetups"

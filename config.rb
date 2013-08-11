@@ -70,3 +70,13 @@ configure :build do
 end
 
 set :haml, format: :html5
+
+ignore "stylesheets/normalize.css"
+ignore "stylesheets/foundation.min.css"
+ignore "stylesheets/jquery-ui-1.9.2.custom.min.css"
+ignore "stylesheets/general_foundicons.scss"
+
+ignore "javascripts/jquery.js"
+ignore "javascripts/foundation.min.js"
+ignore "javascripts/jquery-ui-1.9.2.custom.min.js"
+ignore "javascripts/jquery.ui.datepicker-es.js"

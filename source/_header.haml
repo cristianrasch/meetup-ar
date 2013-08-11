@@ -2,7 +2,12 @@
   .small-12.columns
     .row
       .small-10.columns
-        %h2 Bievenido a meetup-ar
+        %h2
+          Bievenido a
+          = link_to "meetup-ar", "/index.html"
       .small-2.columns
-        = link_to "Ingresar", "/nueva.html", class: "button secondary radius login-btn"
+        - if request.path == "index.html"
+          = link_to "Ingresar", "/nueva.html", class: "button secondary radius login-btn"
+        - else
+          = link_to "Atrás", "javascript:void(0)", class: "back button secondary radius login-btn"
     %hr.sep
